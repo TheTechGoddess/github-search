@@ -18,6 +18,9 @@ interface User {
 }
 
 export default function Home() {
+  const lightModeClass = "bg-white text-black";
+  const darkModeClass = "bg-[#141D2F] text-white";
+
   const [user, setUser] = useState<User>({
     login: null,
     name: "",
@@ -103,12 +106,6 @@ export default function Home() {
               className="w-full my-5 py-6 px-16 rounded-2xl placeholder:text-xl placeholder:text-white outline-none bg-[#1E2A47] text-white text-xl"
               onChange={handleInputChange}
             />
-            <button
-              className="absolute top- right-0 bg-[#0079FF] mr-3 hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-xl"
-              onClick={handleSearchClick}
-            >
-              Search
-            </button>
           </div>
         </div>
         <div className="bg-[#1E2A47] w-full my-8 p-4 lg:p-10 rounded-2xl text-white">
